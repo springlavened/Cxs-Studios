@@ -465,3 +465,34 @@ opacity:0;
 }
 
 }
+/* ===========================
+   CURSOR GLOW
+=========================== */
+
+#cursor-glow{
+
+position:fixed;
+
+width:250px;
+height:250px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,
+rgba(0,232,255,.18) 0%,
+rgba(0,232,255,.08) 40%,
+transparent 75%);
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+z-index:-1;
+
+transition:
+left .08s linear,
+top .08s linear;
+
+filter:blur(18px);
+
+}
