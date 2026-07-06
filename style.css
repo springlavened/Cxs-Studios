@@ -410,3 +410,58 @@ font-size:40px;
 }
 
 }
+/* ===========================
+   FLOATING PARTICLES
+=========================== */
+
+.particle{
+
+position:fixed;
+
+border-radius:50%;
+
+background:#00E8FF;
+
+opacity:.25;
+
+pointer-events:none;
+
+animation:float linear infinite;
+
+z-index:-5;
+
+box-shadow:0 0 15px #00E8FF;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.3;
+
+}
+
+80%{
+
+opacity:.3;
+
+}
+
+100%{
+
+transform:translateY(-180px);
+
+opacity:0;
+
+}
+
+}
