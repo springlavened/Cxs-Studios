@@ -1,60 +1,187 @@
-/* Ambient subtle glowing overlays mimicking the screenshot */
-.ambient-glow-left {
-    background: radial-gradient(circle at 10% 40%, rgba(0, 240, 255, 0.12) 0%, rgba(0, 0, 0, 0) 60%);
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-}
+<body>
 
-.ambient-glow-right {
-    background: radial-gradient(circle at 90% 60%, rgba(255, 0, 127, 0.12) 0%, rgba(0, 0, 0, 0) 60%);
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-}
+<header class="hero">
 
-/* Hero section structural layout correction */
-#home {
-    min-height: 85vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10rem !important; /* Forces solid padding to clear the 80px fixed nav bar */
-    padding-bottom: 6rem !important;
-    position: relative;
-    z-index: 10;
-}
+<div class="hero-overlay"></div>
 
-/* Responsive grid auto-layout fallback to guarantee columns on wider screens */
-.projects-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
-    gap: 2rem !important;
-    width: 100%;
-}
+<div class="hero-content">
 
-/* Smooth scale animation on hover */
-.does it premium-card {
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    background: rgba(7, 7, 10, 0.6);
-    backdrop-filter: blur(12px);
-    width: 100%;
-    max-width: 420px; /* Prevents cards from stretching too wide on wide viewports */
-    margin-left: auto;
-    margin-right: auto;
-}
+<img src="images/cxs-logo.png" alt="CXS Studio Logo" class="hero-logo">
 
-.premium-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(0, 240, 255, 0.3);
-    box-shadow: 0 15px 35px -10px rgba(0, 240, 255, 0.2), 0 0 1px 1px rgba(0, 240, 255, 0.1);
-}
+<h1>CREATING THE NEXT GENERATION OF HORROR</h1>
 
-/* Magenta hover variant for specific cards */
-.premium-card-magenta:hover {
-    border-color: rgba(255, 0, 127, 0.3);
-    box-shadow: 0 15px 35px -10px rgba(255, 0, 127, 0.2), 0 0 1px 1px rgba(255, 0, 127, 0.1);
-}
+<p>
+Games, Friday Night Funkin' Mods, Animated Series,
+Original Stories, and Digital Experiences.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="btn">Explore Projects</a>
+
+<a href="https://discord.gg/KKU3Wh3jBe" target="_blank" class="btn secondary">
+Join Discord
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section id="projects">
+
+<div class="section-title">
+
+<span>FEATURED</span>
+
+<h2>Current Projects</h2>
+
+</div>
+
+<div class="project-grid">
+
+<div class="project-card">
+<h3>GodsFall</h3>
+<p>A complete reimagining of the Irida story.</p>
+</div>
+
+<div class="project-card">
+<h3>Bendy and the Blood Bath</h3>
+<p>An original Bendy horror experience.</p>
+</div>
+
+<div class="project-card">
+<h3>Au Revoir</h3>
+<p>A psychological horror mod inspired by Max Design Pro.</p>
+</div>
+
+<div class="project-card">
+<h3>VS. Sonic Anomalies</h3>
+<p>A Sonic.EXE experience unlike any other.</p>
+</div>
+
+<div class="project-card">
+<h3>Echoes Below</h3>
+<p>An atmospheric Roblox horror game.</p>
+</div>
+
+<div class="project-card">
+<h3>KFED Relisted</h3>
+<p>A modern revival currently in development.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="section-title">
+
+<span>ABOUT</span>
+
+<h2>CXS Studio</h2>
+
+</div>
+
+<p class="about-text">
+
+CXS Studio is an independent creative team focused on developing
+immersive horror games, Friday Night Funkin' mods,
+animated series, artwork, and original stories.
+
+Our goal is to create unforgettable experiences that blend
+creativity, suspense, and passion into every project.
+
+</p>
+
+</section>
+
+<section id="services">
+
+<div class="section-title">
+
+<span>CREATE</span>
+
+<h2>What We Make</h2>
+
+</div>
+
+<div class="services">
+
+<div>🎮 Games</div>
+
+<div>🎵 FNF Mods</div>
+
+<div>📺 Animated Shows</div>
+
+<div>🎨 Artwork</div>
+
+<div>👥 Community Events</div>
+
+<div>🧩 Original Stories</div>
+
+</div>
+
+</section>
+
+<section id="community">
+
+<div class="section-title">
+
+<span>JOIN US</span>
+
+<h2>Become Part of CXS Studio</h2>
+
+</div>
+
+<p>
+
+Follow development, watch livestreams,
+see exclusive teasers,
+and meet the community.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://discord.gg/KKU3Wh3jBe" target="_blank" class="btn">
+
+Discord
+
+</a>
+
+<a href="https://youtube.com/@smlmoviegodsfall?si=PIxd27mr5Rk5bY7z" target="_blank" class="btn">
+
+YouTube
+
+</a>
+
+<a href="https://x.com/SmlMovieGodsFal?s=20" target="_blank" class="btn">
+
+Twitter/X
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 CXS Studio
+
+</p>
+
+<p>
+
+Creating unforgettable horror experiences.
+
+</p>
+
+</footer>
+
+</body>
