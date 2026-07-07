@@ -1733,3 +1733,122 @@ padding-left:20px;
 }
 
 }
+
+/* ===========================
+   Intro Screen
+=========================== */
+
+#intro-screen{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100vh;
+
+background:#050608;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+z-index:99999;
+
+transition:1.2s;
+
+}
+
+#intro-screen.hidden{
+
+opacity:0;
+
+visibility:hidden;
+
+}
+
+.intro-logo{
+
+width:220px;
+
+margin-bottom:30px;
+
+filter:
+
+drop-shadow(0 0 15px cyan)
+drop-shadow(0 0 35px #ff4fd8);
+
+animation:introFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes introFloat{
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+.intro-content h1{
+
+font-size:60px;
+
+margin-bottom:15px;
+
+}
+
+.intro-content p{
+
+font-size:22px;
+
+color:#BFC7D3;
+
+margin-bottom:40px;
+
+}
+
+#enter-site{
+
+padding:18px 45px;
+
+font-size:18px;
+
+font-weight:700;
+
+border:none;
+
+border-radius:999px;
+
+cursor:pointer;
+
+background:
+
+linear-gradient(
+90deg,
+#34F5FF,
+#FF4FD8
+);
+
+color:white;
+
+transition:.35s;
+
+}
+
+#enter-site:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+
+0 0 35px rgba(52,245,255,.35);
+
+}
