@@ -1,343 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>CXS Studio</title>
-
-    <meta name="description" content="CXS Studio - Independent Game Development, Friday Night Funkin' Mods, Horror Experiences, and Original Stories.">
-
+    <title>CXS Studio | Independent Horror Game Studio</title>
+    
+    <!-- Tailwind CSS for layout structure -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cxs-dark': '#020204',
+                        'cxs-card': '#07070a',
+                        'cxs-cyan': '#00f0ff',
+                        'cxs-magenta': '#ff007f',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Link to your external stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+<body class="bg-cxs-dark text-gray-200 antialiased min-h-screen flex flex-col font-sans selection:bg-cxs-cyan selection:text-black overflow-x-hidden">
 
-<body>
+    <!-- Glowing Backgrounds -->
+    <div class="fixed inset-0 ambient-glow-left pointer-events-none z-0"></div>
+    <div class="fixed inset-0 ambient-glow-right pointer-events-none z-0"></div>
 
-<div class="background-glow"></div>
-
-<header>
-
-    <div class="logo">
-
-        <!-- Replace this later with your logo -->
-        <h2>CXS Studio</h2>
-
-    </div>
-
-    <nav>
-
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#community">Community</a>
-
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 top-0 bg-cxs-dark/85 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Studio Brand and Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center bg-black border border-cxs-cyan shadow-[0_0_15px_rgba(0,240,255,0.4)]">
+                        <svg viewBox="0 0 100 100" class="w-full h-full p-1">
+                            <circle cx="50" cy="50" r="40" stroke="#00f0ff" stroke-width="6" fill="none" stroke-dasharray="200 40" />
+                            <path d="M25,25 L75,75 M75,25 L25,75" stroke="#ff007f" stroke-width="10" stroke-linecap="round" />
+                            <circle cx="50" cy="50" r="10" fill="#00f0ff" />
+                        </svg>
+                    </div>
+                    <span class="font-display font-bold text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cxs-cyan to-white">CXS Studio</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#home" class="text-white hover:text-cxs-cyan transition-colors">Home</a>
+                    <a href="#projects" class="text-gray-400 hover:text-cxs-cyan transition-colors">Projects</a>
+                    <a href="#about" class="text-gray-400 hover:text-cxs-cyan transition-colors">About</a>
+                    <a href="#news" class="text-gray-400 hover:text-cxs-cyan transition-colors">News</a>
+                    <a href="#socials" class="text-gray-400 hover:text-cxs-cyan transition-colors">Community</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
-</header>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-    <div class="hero-text">
-
-        <span class="studio-tag">
+    <!-- Main Hero Section -->
+    <section id="home" class="relative pt-44 pb-24 px-4 flex flex-col justify-center items-center text-center overflow-hidden z-10">
+        <div class="inline-flex items-center gap-2 border border-cxs-cyan/30 bg-cxs-cyan/5 text-cxs-cyan px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase mb-8 backdrop-blur-sm shadow-[0_0_15px_rgba(0,240,255,0.05)]">
+            <span class="w-1.5 h-1.5 rounded-full bg-cxs-cyan animate-pulse"></span>
             Independent Horror Game Studio
-        </span>
+        </div>
 
-        <h1>
-
-            Creating Worlds.<br>
-            Breaking Expectations.
-
+        <h1 class="text-5xl md:text-8xl font-display font-bold tracking-tight text-white max-w-5xl leading-[1.05] mb-6">
+            Creating Worlds.<br>Breaking Expectations.
         </h1>
 
-        <p>
-
-            CXS Studio creates original games,
-            Friday Night Funkin' mods,
-            horror experiences,
-            music,
-            and unforgettable stories.
-
+        <p class="text-gray-400 text-lg md:text-xl max-w-3xl leading-relaxed mb-10 px-4">
+            CXS Studio creates original games, Friday Night Funkin' mods, horror experiences, music, and unforgettable stories.
         </p>
 
-        <div class="hero-buttons">
-
-            <a href="#projects" class="primary-button">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center font-display font-semibold text-sm">
+            <a href="#projects" class="w-48 sm:w-auto bg-cxs-cyan hover:bg-cxs-cyan/90 text-black py-4 px-8 rounded-full shadow-[0_0_25px_rgba(0,240,255,0.25)] transition-all transform hover:-translate-y-0.5 text-center">
                 Explore Projects
             </a>
-
-            <a href="#about" class="secondary-button">
+            <a href="#about" class="w-48 sm:w-auto border border-white/20 hover:border-cxs-cyan text-white hover:text-cxs-cyan py-4 px-8 rounded-full bg-white/5 hover:bg-cxs-cyan/5 transition-all text-center">
                 Learn More
             </a>
-
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects" class="projects">
-
-    <div class="section-title">
-
-        <span>OUR PROJECTS</span>
-
-        <h2>Featured Projects</h2>
-
-    </div>
-
-    <div class="project-grid">
-
-        <div class="project-card">
-
-            <div class="project-image">
-
-                Poster Coming Soon
-
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-[#040407] border-t border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between">
+                <div>
+                    <span class="text-xs font-bold tracking-widest text-cxs-magenta uppercase">Active Catalog</span>
+                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white mt-2">Current Projects</h2>
+                </div>
+                <p class="text-gray-500 text-sm mt-2 md:mt-0 font-mono">> Loading dynamic databases...</p>
             </div>
 
-            <div class="project-content">
-
-                <span class="status development">
-                    In Development
-                </span>
-
-                <h3>GodsFall</h3>
-
-                <p>
-
-                    A dark reimagining featuring
-                    an original story,
-                    soundtrack,
-                    and unforgettable characters.
-
-                </p>
-
-                <a href="#" class="project-button">
-                    View Project
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="project-card">
-
-            <div class="project-image">
-
-                Poster Coming Soon
-
-            </div>
-
-            <div class="project-content">
-
-                <span class="status development">
-                    In Development
-                </span>
-
-                <h3>Bendy and the Blood Bath</h3>
-
-                <p>
-
-                    A terrifying new experience inspired by
-                    classic cartoons and horror.
-
-                </p>
-
-                <a href="#" class="project-button">
-                    View Project
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="project-card">
-
-            <div class="project-image">
-
-                Poster Coming Soon
-
-            </div>
-
-            <div class="project-content">
-
-                <span class="status development">
-                    In Development
-                </span>
-
-                <h3>VS. Sonic Anomalies</h3>
-
-                <p>
-
-                    A mysterious Friday Night Funkin'
-                    experience where reality begins to break.
-
-                </p>
-
-                <a href="#" class="project-button">
-                    View Project
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about" class="about">
-
-    <div class="section-title">
-
-        <span>WHO WE ARE</span>
-
-        <h2>About CXS Studio</h2>
-
-    </div>
-
-    <p>
-
-        CXS Studio is an independent creative studio focused on
-        games, mods, artwork, animation, music,
-        and original horror experiences.
-
-        Every project is built with creativity,
-        passion,
-        and attention to detail.
-
-    </p>
-
-</section>
-
-<!-- NEWS -->
-
-<section id="news" class="news">
-
-    <div class="section-title">
-
-        <span>LATEST NEWS</span>
-
-        <h2>Development Updates</h2>
-
-    </div>
-
-    <div class="news-grid">
-
-        <div class="news-card">
-
-            <h3>Website Launch</h3>
-
-            <p>
-
-                The official CXS Studio website
-                is now live.
-
-            </p>
-
-        </div>
-
-        <div class="news-card">
-
-            <h3>Projects In Development</h3>
-
-            <p>
-
-                Multiple projects are currently
-                in active development.
-
-            </p>
-
-        </div>
-
-        <div class="news-card">
-
-            <h3>More Coming Soon</h3>
-
-            <p>
-
-                Stay tuned for teasers,
-                announcements,
-                and reveals.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- COMMUNITY -->
-
-<section id="community" class="community">
-
-    <div class="section-title">
-
-        <span>JOIN US</span>
-
-        <h2>Become Part of the Community</h2>
-
-    </div>
-
-    <p>
-
-        Follow development,
-        receive sneak peeks,
-        and join the CXS Studio community.
-
-    </p>
-
-    <div class="community-buttons">
-
-        <a href="#">Discord</a>
-        <a href="#">YouTube</a>
-        <a href="https://github.com/springlavened">GitHub</a>
-
-    </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-    <h2>CXS Studio</h2>
-
-    <p>
-
-        Creating games,
-        mods,
-        artwork,
-        and unforgettable horror experiences.
-
-    </p>
-
-    <p class="copyright">
-
-        © 2026 CXS Studio.
-        All Rights Reserved.
-
-    </p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Godsfall -->
+                <div class="premium-card premium-card-magenta rounded-2xl overflow-hidden border border-white/5 group">
+                    <div class="h-52 bg-black flex items-center justify-center relative overflow-hidden">
+                        <img src="1000014734.png" alt="SML Movie: Godsfall" class="absolute w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+                        <div class="w-full h-full bg-[#120208] flex flex-col items-center justify-center p-6 text-center select-none">
+                            <svg viewBox="0 0 200 200" class="w-20 h-20 text-cxs-magenta drop-shadow-[0_0_8px_rgba(255,0,127,0.6)] mb-2">
+                                <circle cx="100" cy="100" r="45" stroke="#ff007f" stroke-width="4" fill="none" />
+                                <circle cx="100" cy="100" r="30" stroke="#ff
