@@ -173,24 +173,19 @@ random.style.boxShadow="0 0 35px rgba(52,245,255,.30)";
 
 },2500);
 
-// ----------------------------
-// Loading Animation
-// ----------------------------
+// ===========================
+// Intro Screen
+// ===========================
 
-window.addEventListener("load",()=>{
+const introScreen = document.getElementById("intro-screen");
+const enterButton = document.getElementById("enter-site");
 
-const loader=document.querySelector(".loader");
+if (introScreen && enterButton) {
 
-if(loader){
+    enterButton.addEventListener("click", () => {
 
-setTimeout(()=>{
+        introScreen.classList.add("hidden");
 
-loader.classList.add("hidden");
-
-},800);
+    });
 
 }
-
-});
-
-console.log("CXS Studio Website Loaded");
