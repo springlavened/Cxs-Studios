@@ -2336,3 +2336,42 @@ progress::-moz-progress-bar{
     line-height:1.8;
 
 }
+
+/* ============================= */
+/* NEWS TAGS */
+/* ============================= */
+
+.status{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:18px;
+    letter-spacing:.5px;
+}
+
+.status.dev{
+    background:rgba(255,70,70,.18);
+    color:#ff6b6b;
+}
+
+.status.announcement{
+    background:rgba(190,90,255,.18);
+    color:#c88cff;
+}
+
+.status.community{
+    background:rgba(70,170,255,.18);
+    color:#63b8ff;
+}
+
+.status.release{
+    background:rgba(90,255,120,.18);
+    color:#67ff8b;
+}
+
+.status.website{
+    background:rgba(255,220,70,.18);
+    color:#ffd65a;
+}
