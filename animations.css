@@ -359,3 +359,39 @@ filter:brightness(1.4);
 }
 
 }
+
+/* ==========================================
+   CURSOR GLOW
+========================================== */
+
+.cursor-glow{
+
+position:fixed;
+
+width:350px;
+height:350px;
+
+border-radius:50%;
+
+pointer-events:none;
+
+left:0;
+top:0;
+
+transform:translate(-50%,-50%);
+
+background:
+radial-gradient(circle,
+rgba(255,40,40,.12),
+transparent 70%);
+
+mix-blend-mode:screen;
+
+transition:
+
+left .05s linear,
+top .05s linear;
+
+z-index:-1;
+
+}
