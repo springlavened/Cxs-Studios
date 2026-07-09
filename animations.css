@@ -1,0 +1,361 @@
+/* ==========================================
+   CXS STUDIO ANIMATION FRAMEWORK v1.0
+========================================== */
+
+/* Fade in entire page */
+
+body{
+
+opacity:0;
+
+animation:pageFade 1.2s ease forwards;
+
+}
+
+@keyframes pageFade{
+
+from{
+
+opacity:0;
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* Smooth scrolling */
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+/* Section reveal */
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:.8s ease;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* Card hover */
+
+.service-box,
+.info-box,
+.project-card{
+
+transition:.35s;
+
+}
+
+.service-box:hover,
+.info-box:hover,
+.project-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+0 15px 40px rgba(255,0,80,.25);
+
+}
+
+/* Button hover */
+
+.btn{
+
+transition:.35s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px) scale(1.03);
+
+box-shadow:
+
+0 0 20px cyan,
+
+0 0 45px rgb(255,80,180);
+
+}
+
+/* Logo animation */
+
+.hero-logo{
+
+animation:logoFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes logoFloat{
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+/* Hero title */
+
+.hero h1{
+
+animation:titleReveal 1.5s ease;
+
+}
+
+@keyframes titleReveal{
+
+from{
+
+opacity:0;
+
+letter-spacing:18px;
+
+}
+
+to{
+
+opacity:1;
+
+letter-spacing:-2px;
+
+}
+
+}
+
+/* ==========================================
+   GODSFALL EMBERS
+========================================== */
+
+.godsfall-background{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:-1;
+
+}
+
+.ember{
+
+position:absolute;
+
+width:4px;
+height:4px;
+
+border-radius:50%;
+
+background:#ff3b3b;
+
+box-shadow:
+
+0 0 10px red,
+
+0 0 20px orange;
+
+animation:emberRise linear infinite;
+
+opacity:.8;
+
+}
+
+@keyframes emberRise{
+
+0%{
+
+transform:
+
+translateY(100vh)
+translateX(0)
+scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+
+translateY(-120vh)
+translateX(80px)
+scale(1.5);
+
+opacity:0;
+
+}
+
+}
+
+/* ==========================================
+   GODSFALL DIVINE GLOW
+========================================== */
+
+.project-logo{
+
+filter:
+
+drop-shadow(0 0 20px crimson)
+
+drop-shadow(0 0 50px red)
+
+drop-shadow(0 0 80px orange);
+
+animation:
+
+logoFloat 5s ease-in-out infinite,
+
+godPulse 4s ease infinite;
+
+}
+
+@keyframes godPulse{
+
+0%{
+
+filter:
+
+drop-shadow(0 0 20px crimson)
+
+drop-shadow(0 0 40px red);
+
+}
+
+50%{
+
+filter:
+
+drop-shadow(0 0 35px red)
+
+drop-shadow(0 0 80px orange);
+
+}
+
+100%{
+
+filter:
+
+drop-shadow(0 0 20px crimson)
+
+drop-shadow(0 0 40px red);
+
+}
+
+}
+
+.project-quote{
+
+margin-top:30px;
+
+font-size:22px;
+
+font-style:italic;
+
+opacity:.8;
+
+color:#ffdede;
+
+animation:quoteFade 3s ease;
+
+}
+
+@keyframes quoteFade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:.8;
+
+transform:translateY(0);
+
+}
+
+}
+
+progress{
+
+width:100%;
+
+height:14px;
+
+margin-top:10px;
+
+border:none;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+progress::-webkit-progress-value{
+
+background:linear-gradient(
+
+90deg,
+
+red,
+
+crimson,
+
+orange
+
+);
+
+animation:progressGlow 2s infinite;
+
+}
+
+@keyframes progressGlow{
+
+50%{
+
+filter:brightness(1.4);
+
+}
+
+}
