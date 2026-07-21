@@ -189,3 +189,108 @@ if (introScreen && enterButton) {
     });
 
 }
+
+/*=========================================
+  BENDY AND THE BLOOD BATH EFFECTS
+=========================================*/
+
+if (document.body.classList.contains("project-bendy")) {
+
+    /* Floating Ink Particles */
+
+    const particleCount = 30;
+
+    for (let i = 0; i < particleCount; i++) {
+
+        const ink = document.createElement("div");
+
+        ink.className = "ink-particle";
+
+        ink.style.left = Math.random() * 100 + "vw";
+        ink.style.animationDuration = 8 + Math.random() * 12 + "s";
+        ink.style.animationDelay = Math.random() * 8 + "s";
+        ink.style.opacity = Math.random() * 0.4 + 0.1;
+        ink.style.transform =
+            `scale(${0.4 + Math.random() * 1.3})`;
+
+        document.body.appendChild(ink);
+
+    }
+
+    /* Fade Sections */
+
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+            }
+
+        });
+
+    }, {
+
+        threshold: 0.15
+
+    });
+
+    sections.forEach(section => {
+
+        section.classList.add("fade-section");
+
+        observer.observe(section);
+
+    });
+
+    /* Logo Glow */
+
+    const logo = document.querySelector(".project-logo");
+
+    if (logo) {
+
+        setInterval(() => {
+
+            logo.animate([
+
+                {
+                    filter:
+                    "drop-shadow(0 0 15px rgba(255,220,120,.2))"
+                },
+
+                {
+                    filter:
+                    "drop-shadow(0 0 35px rgba(255,220,120,.5))"
+                },
+
+                {
+                    filter:
+                    "drop-shadow(0 0 15px rgba(255,220,120,.2))"
+                }
+
+            ], {
+
+                duration: 3500,
+
+                easing: "ease-in-out"
+
+            });
+
+        }, 3500);
+
+    }
+
+    /* Film Grain Flicker */
+
+    setInterval(() => {
+
+        document.body.style.filter =
+            `brightness(${0.98 + Math.random() * 0.04})`;
+
+    }, 120);
+
+}
