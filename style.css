@@ -2498,3 +2498,58 @@ progress::-moz-progress-bar{
 
     border-top:1px solid rgba(229,192,93,.15);
 }
+
+/* Ink Particles */
+
+.ink-particle{
+
+    position:fixed;
+
+    width:8px;
+    height:8px;
+
+    background:#d8b14a;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    z-index:0;
+
+    animation:inkFloat linear infinite;
+}
+
+@keyframes inkFloat{
+
+    from{
+
+        transform:translateY(110vh);
+
+    }
+
+    to{
+
+        transform:translateY(-10vh);
+
+    }
+
+}
+
+/* Fade Sections */
+
+.fade-section{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:1s;
+}
+
+.fade-section.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
