@@ -2375,3 +2375,126 @@ progress::-moz-progress-bar{
     background:rgba(255,220,70,.18);
     color:#ffd65a;
 }
+
+/* ==========================================
+   BENDY AND THE BLOOD BATH
+========================================== */
+
+.project-bendy {
+
+    background:
+        radial-gradient(circle at top,
+        rgba(255,210,120,.08),
+        transparent 60%),
+        #090909;
+
+    color:#f2f2f2;
+}
+
+/* Hero */
+
+.project-bendy .project-hero{
+
+    position:relative;
+
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.85)),
+        url("../images/bendy-bg.jpg") center/cover;
+
+    overflow:hidden;
+}
+
+/* Yellow glow behind logo */
+
+.project-bendy .project-logo{
+
+    filter:
+        drop-shadow(0 0 15px rgba(255,220,120,.25))
+        drop-shadow(0 0 35px rgba(255,220,120,.15));
+
+    transition:.35s;
+}
+
+.project-bendy .project-logo:hover{
+
+    transform:scale(1.03);
+
+    filter:
+        drop-shadow(0 0 25px rgba(255,220,120,.45))
+        drop-shadow(0 0 60px rgba(255,220,120,.25));
+}
+
+/* Quote */
+
+.project-bendy .project-quote{
+
+    color:#e5c05d;
+
+    font-style:italic;
+}
+
+/* Section labels */
+
+.project-bendy .section-title span{
+
+    color:#d9b04d;
+
+    letter-spacing:3px;
+}
+
+/* Cards */
+
+.project-bendy .info-box,
+.project-bendy .project-card{
+
+    background:#101010;
+
+    border:1px solid rgba(229,192,93,.15);
+
+    transition:.3s;
+}
+
+.project-bendy .info-box:hover,
+.project-bendy .project-card:hover{
+
+    border-color:#d9b04d;
+
+    box-shadow:
+        0 0 20px rgba(229,192,93,.15);
+
+    transform:translateY(-4px);
+}
+
+/* Progress bar */
+
+.project-bendy progress{
+
+    width:100%;
+
+    height:12px;
+
+    accent-color:#d9b04d;
+}
+
+/* Buttons */
+
+.project-bendy .btn{
+
+    border-color:#d9b04d;
+}
+
+.project-bendy .btn:hover{
+
+    background:#d9b04d;
+
+    color:#111;
+
+    box-shadow:0 0 18px rgba(229,192,93,.3);
+}
+
+/* Footer */
+
+.project-bendy footer{
+
+    border-top:1px solid rgba(229,192,93,.15);
+}
